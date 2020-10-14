@@ -1,17 +1,5 @@
-class DynamicDispatchRegistry<B, T extends Function> {
-  final _registry = <Type, T>{};
-
-  T register(Type type, T function) {
-    final old = _registry[type];
-    _registry[type] = function;
-    return old;
-  }
+class DynamicDispatchRegistry<T extends Function> {
+  T register(T function) => null;
 }
 
-class Registry extends DynamicDispatchRegistry<
-    int,
-    int Function(
-  int m, {
-  void Function(int) f,
-  int k,
-})> {}
+class Registry extends DynamicDispatchRegistry<int Function({int x})> {}

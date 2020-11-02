@@ -27,6 +27,8 @@ jobs:
         flutter-version: ${{ matrix.flutter_version }}
         channel: dev
 
+    - run: flutter --version
+
     - run: flutter test
 
 # vim: set et sw=2 sts=2 :
